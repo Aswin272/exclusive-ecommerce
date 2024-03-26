@@ -51,7 +51,7 @@ def category(request):
         category_instance=Category.objects.all()
         return render(request,'admin_category.html',{'categories':category_instance})
 
-
+@never_cache
 def add_category(request):
     if request.method == 'POST':
         name = request.POST.get('name')

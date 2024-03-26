@@ -89,8 +89,8 @@
               </div>
           </div>
           <div class = "product-div-right">
-              <span class = "product-name">(New) Analog Watch - For Men</span>
-              <span class = "product-price">$ 50.25</span>
+              <span class = "product-name">{{products.name}}</span>
+              <span class = "product-price">$ {{products.price}}</span>
               <div class = "product-rating">
                
                 <div class="card_ratings">
@@ -161,11 +161,15 @@
                   <span><i class = "fas fa-star-half-alt"></i></span>
                   <span>(350 ratings)</span>
               </div>
-              <h3>{{products.Category}}</h3>
-              <p class = "product-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae animi ad minima veritatis dolore. Architecto facere dignissimos voluptate fugit ratione molestias quis quidem exercitationem voluptas.</p>
+              <h3>Category : {{products.Category}}</h3>
+              <p class = "product-description">{{products.description}}</p>
               <div class = "btn-groups">
+                {% if products.quantity > 0 %}
                   <button type = "button" class = "add-cart-btn"><i class = "fas fa-shopping-cart"></i>add to cart</button>
                   <button type = "button" class = "buy-now-btn"><i class = "fas fa-wallet"></i>buy now</button>
+                  {% else %}
+                  <p>out of stock</p>
+                  {% endif %}
               </div>
           </div>
       </div>

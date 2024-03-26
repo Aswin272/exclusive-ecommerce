@@ -1,0 +1,18 @@
+{% extends "header.html" %}
+
+{% block content %}
+
+<form action="{% url 'verify_otp' %}" method="POST" id="otp-form">
+    {% csrf_token %}
+    <h2>Enter OTP</h2>
+    <p>Please enter the OTP sent to {{ email }}</p>
+    <input type="text" name="otp" id="otp-input" placeholder="Enter OTP" required>
+    <button type="submit">Verify OTP</button>
+</form>
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+    
+
+{% endblock content %}
+

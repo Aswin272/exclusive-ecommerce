@@ -9,7 +9,8 @@ from django.conf import settings
 urlpatterns = [
     
     path('signup/',views.signup,name='signup'),
-    path('signin/',views.signin,name='signin')
+    path('signin/',views.signin,name='signin'),
+    path('verify-otp',views.verify_otp,name="verify_otp"),
     
 ]
 

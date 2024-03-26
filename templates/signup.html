@@ -3,6 +3,7 @@
 
 
     {% block content %}
+    
     <section class="section">
       <div class="auth_container">
         <div class="auth_img">
@@ -19,9 +20,6 @@
             <div class="form_group">
               <input type="text" name="name" placeholder="Name" class="form_input" />
             </div>
-            <div class="form_group">
-                <input type="text" name="phone" placeholder="phone" class="form_input" />
-              </div>
             <div class="form_group">
               <input type="email" name="email" placeholder="Email" class="form_input" />
             </div>
@@ -43,8 +41,14 @@
               >
             </div>
           </form>
+          <a title="Google" href="/accounts/google/login/?process=login">Google</a>
+
         </div>
       </div>
+
+
+
+      
     </section>
     {% endblock content %}
 
